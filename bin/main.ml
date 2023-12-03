@@ -9,9 +9,21 @@ let cell_height = screen_height/rows
 
 let main_grid = Array.make_matrix rows cols 0
 
+(* blinker *)
+(*
 let () = main_grid.(10).(10) <- 1
 let () = main_grid.(10).(11) <- 1
 let () = main_grid.(10).(12) <- 1
+*)
+
+
+(* blinker *)
+let () = main_grid.(8).(8) <- 1
+let () = main_grid.(8).(9) <- 1
+let () = main_grid.(9).(8) <- 1
+let () = main_grid.(11).(11) <- 1
+let () = main_grid.(11).(10) <- 1
+let () = main_grid.(10).(11) <- 1
 
 let get_cell_state grid (j,k) = try grid.(j).(k) with Invalid_argument _ -> 0
 
@@ -56,7 +68,7 @@ let make_cell_live (x,y) = Raylib.draw_rectangle (x*cell_width) (y*cell_height) 
 
 let setup () =
   Raylib.init_window screen_width screen_height "Game Of Life";
-  Raylib.set_target_fps 1
+  Raylib.set_target_fps 3
 
 
 let rec loop grid =
