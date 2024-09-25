@@ -1,3 +1,15 @@
+# Glifecaml
+
+## Build
+```bash
+dune build
+```
+and run
+
+```bash
+dune exec ./bin/glifecaml
+```
+
 Reference: https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life
 
 ![Screen Recording 2023-12-03 at 9 28 24 PM](https://github.com/humblenginr/glifecaml/assets/75248557/594f1049-a94d-42ae-b0dd-a2bd44b013ed)
